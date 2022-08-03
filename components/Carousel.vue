@@ -1,9 +1,9 @@
 <template>
   <!-- <div class="flex justify-center w-screen bg-green-900"> -->
   <div class="flex justify-center w-screen">
-    <div class="carousel w-10/12">
+    <div class="carousel w-8/12">
       <div id="slide1" class="carousel-item relative w-full">
-        <img src="https://placeimg.com/800/300/arch" class="w-full" />
+        <NuxtImg preset="carousel" src="https://placeimg.com/850/325/arch" placeholder />
         <div
           class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
         >
@@ -12,7 +12,7 @@
         </div>
       </div>
       <div id="slide2" class="carousel-item relative w-full">
-        <img src="https://placeimg.com/800/300/nature" class="w-full" />
+        <NuxtImg preset="carousel" src="https://placeimg.com/850/325/nature" placeholder />
         <div
           class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
         >
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div id="slide3" class="carousel-item relative w-full">
-        <img src="https://placeimg.com/800/300/arch" class="w-full" />
+        <NuxtImg preset="carousel" src="https://placeimg.com/850/325/arch" placeholder />
         <div
           class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
         >
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div id="slide4" class="carousel-item relative w-full">
-        <img src="https://placeimg.com/800/300/nature" class="w-full" />
+        <NuxtImg preset="carousel" src="https://placeimg.com/850/325/nature" placeholder />
         <div
           class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
         >
