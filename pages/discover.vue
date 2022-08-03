@@ -3,8 +3,6 @@
     <Header class="h-10" />
 
     <div class="mb-auto flex flex-col items-center sm:px-6 lg:px-8 w-full">
-      <Search />
-      <Carousel />
       <Newsletter />
     </div>
 
@@ -14,14 +12,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Search from '../components/Search.vue'
 import Footer from '../components/Footer.vue'
-import Carousel from '../components/Carousel.vue'
 import Header from '~/components/Header.vue'
 import Newsletter from '~/components/Newsletter.vue'
 
 export default Vue.extend({
   name: 'IndexPage',
-  components: { Header, Footer, Search, Carousel, Newsletter },
+  components: { Header, Footer, Newsletter },
 })
 </script>
