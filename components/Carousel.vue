@@ -3,7 +3,8 @@
   <div class="flex justify-center w-screen">
     <div class="carousel w-8/12">
       <div id="slide1" class="carousel-item relative w-full">
-        <NuxtImg preset="carousel" src="https://placeimg.com/850/325/arch" placeholder />
+        <!-- https://image.nuxtjs.org/components/nuxt-img -->
+        <NuxtImg preset="carousel" src="https://placeimg.com/850/325/arch" placeholder class="w-full" />
         <div
           class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
         >

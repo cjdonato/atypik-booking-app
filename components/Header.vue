@@ -24,6 +24,8 @@
         >
           <li><NuxtLink to="/discover">Notre histoire</NuxtLink></li>
           <li><NuxtLink to="/contact">Contactez-nous</NuxtLink></li>
+          <li><NuxtLink to="/category">Catégories</NuxtLink></li>
+          <li><NuxtLink to="/product">Produit (TODO)</NuxtLink></li>
         </ul>
       </div>
       <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">AtypikHouse</NuxtLink>
@@ -31,6 +33,8 @@
         <ul class="menu menu-horizontal p-0">
           <li><NuxtLink to="/discover">Notre histoire</NuxtLink></li>
           <li><NuxtLink to="/contact">Contactez-nous</NuxtLink></li>
+          <li><NuxtLink to="/category">Catégories</NuxtLink></li>
+          <li><NuxtLink to="/product">Produit (TODO)</NuxtLink></li>
         </ul>
       </div>
     </div>

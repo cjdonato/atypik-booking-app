@@ -1,27 +1,28 @@
 <template>
-  <div class="flex flex-col h-screen">
-    <Header class="h-10" />
-
-    <div class="mb-auto flex flex-col items-center sm:px-6 lg:px-8 w-full">
-      <Search />
-      <Carousel />
-      <Newsletter />
+  <CustomTemplate>
+    <Search />
+    <Carousel />
+    <div
+      class="carousel carousel-center max-w-full p-4 space-x-4 rounded-box"
+    >
+      <div v-for="n in 5" :key="n" class="carousel-item">
+        <HomeCard />
+      </div>
     </div>
-
-    <Footer />
-  </div>
+    <Newsletter />
+  </CustomTemplate>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Search from '../components/Search.vue'
-import Footer from '../components/Footer.vue'
 import Carousel from '../components/Carousel.vue'
-import Header from '~/components/Header.vue'
 import Newsletter from '~/components/Newsletter.vue'
+import CustomTemplate from '~/components/CustomTemplate.vue'
+import HomeCard from '~/components/HomeCard.vue'
 
 export default Vue.extend({
   name: 'IndexPage',
-  components: { Header, Footer, Search, Carousel, Newsletter },
+  components: { Search, Carousel, Newsletter, CustomTemplate, HomeCard },
 })
 </script>

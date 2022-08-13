@@ -1,23 +1,46 @@
 <template>
-  <div class="flex flex-col h-screen">
-    <Header class="h-10" />
+  <CustomTemplate>
+    <div id="contact-form" class="flex flex-col gap-4">
+      <div class="flex gap-2">
+        <input
+          type="text"
+          placeholder="Nom"
+          class="input input-bordered w-full max-w-xs"
+        /><input
+          type="text"
+          placeholder="Prénom"
+          class="input input-bordered w-full max-w-xs"
+        />
+      </div>
+      <div class="flex gap-2">
+        <input
+          type="text"
+          placeholder="Email"
+          class="input input-bordered w-full max-w-xs"
+        /><input
+          type="text"
+          placeholder="Téléphone"
+          class="input input-bordered w-full max-w-xs"
+        />
+      </div>
 
-    <div class="mb-auto flex flex-col items-center sm:px-6 lg:px-8 w-full">
-      <Search />
+      <textarea
+        class="textarea textarea-bordered"
+        placeholder="Message"
+      ></textarea>
+      <button class="btn">Envoyer</button>
     </div>
-
-    <Footer />
-  </div>
+    <Newsletter />
+  </CustomTemplate>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Search from '../components/Search.vue'
-import Footer from '../components/Footer.vue'
-import Header from '~/components/Header.vue'
+import CustomTemplate from '~/components/CustomTemplate.vue'
+import Newsletter from '~/components/Newsletter.vue'
 
 export default Vue.extend({
   name: 'ContactPage',
-  components: { Header, Footer, Search },
+  components: { CustomTemplate, Newsletter },
 })
 </script>
