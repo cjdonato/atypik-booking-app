@@ -25,7 +25,7 @@
           <li><NuxtLink to="/discover">Notre histoire</NuxtLink></li>
           <li><NuxtLink to="/contact">Contactez-nous</NuxtLink></li>
           <li><NuxtLink to="/category">Catégories</NuxtLink></li>
-          <li><NuxtLink to="/product">Produit (TODO)</NuxtLink></li>
+          <!-- <li><NuxtLink to="/product">Produit (TODO)</NuxtLink></li> -->
         </ul>
       </div>
       <NuxtLink to="/" class="btn btn-ghost normal-case text-xl">AtypikHouse</NuxtLink>
@@ -34,7 +34,7 @@
           <li><NuxtLink to="/discover">Notre histoire</NuxtLink></li>
           <li><NuxtLink to="/contact">Contactez-nous</NuxtLink></li>
           <li><NuxtLink to="/category">Catégories</NuxtLink></li>
-          <li><NuxtLink to="/product">Produit (TODO)</NuxtLink></li>
+          <!-- <li><NuxtLink to="/product">Produit (TODO)</NuxtLink></li> -->
         </ul>
       </div>
     </div>
@@ -58,11 +58,11 @@
           </svg>
         </div>
       </label>
-      <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+      <NuxtLink to="/account" tabindex="0" class="btn btn-ghost btn-circle avatar">
         <div class="w-10 rounded-full">
           <img src="https://placeimg.com/80/80/people" />
         </div>
-      </label>
+      </NuxtLink>
     </div>
   </div>
 </template>
