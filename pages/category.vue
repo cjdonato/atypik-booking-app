@@ -3,6 +3,7 @@
     <Search />
 
     <p v-if="$fetchState.pending">Loading....</p>
+    <p v-else-if="$fetchState.error">Error</p>
     <NuxtLink
       v-else
       :to="{ name: 'product-id', params: { id: accommodations[0].id } }"
