@@ -18,5 +18,8 @@ import Profile from '~/components/Profile.vue'
 export default {
   name: 'AccountPage',
   components: { CustomTemplate, Login, Register, Profile },
+  mounted() {
+    this.$store.commit('setAuth', localStorage.getItem('user'))
+  },
 }
 </script>

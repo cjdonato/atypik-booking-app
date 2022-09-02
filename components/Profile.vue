@@ -74,6 +74,7 @@ export default {
     // },
     async logout() {
       this.$store.commit('setAuth', null)
+      localStorage.clear()
     },
   },
 }

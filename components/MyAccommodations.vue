@@ -5,7 +5,7 @@
     <div v-else>
       <h1 class="font-bold text-xl">Mes hebergements</h1>
       <NuxtLink
-        v-for="accom in accommodations.slice(0, 5)"
+        v-for="accom in accommodations"
         :key="accom.id"
         :to="{ name: 'product-id', params: { id: accom.id } }"
         class="card lg:card-side bg-base-100 shadow-xl mb-8 min-w-full h-32"
@@ -47,8 +47,9 @@ export default {
     accommodations: [],
   }),
   async fetch() {
+    const user = JSON.parse(localStorage.getItem('user'))
     await this.$axios
-      .$get('/accommodation/user/' + this.$store.state.auth.id)
+      .$get('/accommodation/user/' + user.id)
       .then((response) => {
         console.log(response)
         this.accommodations = response

@@ -57,6 +57,7 @@ export default {
           this.errored = false
           const auth = response.user
           this.$store.commit('setAuth', auth)
+          localStorage.setItem('user', JSON.stringify(auth))
         })
         .catch((error) => {
           console.log(error)
