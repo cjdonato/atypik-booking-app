@@ -13,7 +13,7 @@
 import CustomTemplate from '~/components/CustomTemplate.vue'
 import Login from '~/components/Login.vue'
 import Register from '~/components/Register.vue'
-import Profile from '~/components/Profile.vue';
+import Profile from '~/components/Profile.vue'
 
 export default {
   name: 'AccountPage',

@@ -10,7 +10,7 @@
       class="card lg:card-side bg-base-100 shadow-xl mb-8 min-w-full"
     >
       <figure>
-        <img src="https://placeimg.com/400/400/arch" alt="Album" />
+        <img :src="accommodations[0].image" alt="Album" width="300" height="300"/>
       </figure>
       <div class="card-body">
         <h2 class="card-title">{{ accommodations[0].name }}</h2>
@@ -28,7 +28,7 @@
         class="card w-96 bg-base-100 shadow-xl"
       >
         <figure>
-          <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+          <img :src="accom.image" alt="Shoes" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">{{ accom.name }}</h2>
@@ -54,7 +54,7 @@ export default {
   }),
   async fetch() {
     await this.$axios.$get('/accommodation/').then((response) => {
-      console.log(response)
+      // console.log(response)
       this.accommodations = response
     })
   },

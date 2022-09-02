@@ -30,7 +30,7 @@ export default {
     async login() {
       await this.$axios
         .$post('/user/', {
-          username: this.email,
+          email: this.email,
           password: this.password,
         })
         .then((response) => {

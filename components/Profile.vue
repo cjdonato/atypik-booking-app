@@ -58,7 +58,7 @@ export default {
     // async modify() {
     //     await this.$axios
     //       .$put('/user/', {
-    //         username: this.email,
+    //         email: this.email,
     //         password: this.password,
     //       })
     //       .then((response) => {

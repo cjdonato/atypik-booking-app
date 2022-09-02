@@ -49,10 +49,12 @@ export default {
     accommodation: null,
   }),
   async fetch() {
-    await this.$axios.$get('/accommodation/').then((response) => {
-      console.log(response)
-      this.accommodations = response
-    })
+    await this.$axios
+      .$get('/accommodation/' + this.$route.params.id)
+      .then((response) => {
+        // console.log(response)
+        this.accommodation = response
+      })
   },
 }
 </script>

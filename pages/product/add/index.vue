@@ -2,37 +2,45 @@
   <CustomTemplate>
     <p class="mb-8">Ajout d'hebergement</p>
 
-    <div id="add-accom-form" class="flex flex-col gap-4 w-128">
+    <form
+      id="add-accom-form"
+      class="flex flex-col gap-4 w-128"
+      @submit="add_accommodation"
+    >
+      <select v-model="type" class="select select-bordered w-full" required>
+        <option selected>Category 1</option>
+        <option>Category 2</option>
+        <option>Category 3</option>
+      </select>
       <input
-        v-model="type"
-        type="text"
-        placeholder="Type"
-        class="input input-bordered w-full"
-      /><input
         v-model="name"
         type="text"
         placeholder="Nom"
         class="input input-bordered w-full"
+        required
       />
       <input
         v-model="price"
-        type="text"
+        type="number"
         placeholder="Prix"
         class="input input-bordered w-full"
+        required
       /><input
         v-model="capacity"
-        type="text"
+        type="number"
         placeholder="Capacite"
         class="input input-bordered w-full"
+        required
       />
 
       <textarea
         v-model="description"
         class="textarea textarea-bordered"
         placeholder="Description"
+        required
       ></textarea>
-      <button class="btn" @click="add_accommodation">Envoyer</button>
-    </div>
+      <button class="btn" type="submit">Ajouter</button>
+    </form>
   </CustomTemplate>
 </template>
 
@@ -43,7 +51,7 @@ export default {
   name: 'AddAccommodationPage',
   components: { CustomTemplate },
   data: () => ({
-    type: '',
+    type: 'Category 1',
     name: '',
     price: '',
     capacity: '',
@@ -54,8 +62,11 @@ export default {
     async add_accommodation() {
       await this.$axios
         .$post('/accommodation/add', {
+          type: this.type,
           name: this.name,
           description: this.description,
+          price: this.price,
+          capacity: this.capacity,
           image: 'https://placeimg.com/400/400/arch',
           userID: this.$store.state.auth.id,
         })

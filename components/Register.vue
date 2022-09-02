@@ -47,8 +47,10 @@ export default {
     async register() {
       await this.$axios
         .$post('/user/add', {
-          username: this.email,
+          email: this.email,
           password: this.password,
+          name1: this.nom,
+          name2: this.prenom,
         })
         .then((response) => {
           console.log(response)

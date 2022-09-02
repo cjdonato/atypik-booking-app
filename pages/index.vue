@@ -26,7 +26,7 @@ export default {
   }),
   async fetch() {
     await this.$axios.$get('/accommodation/').then((response) => {
-      console.log(response)
+      // console.log(response)
       this.accommodations = response
     })
   },
