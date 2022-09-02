@@ -53,9 +53,10 @@ export default {
     accommodations: [],
   }),
   async fetch() {
-    this.accommodations = await fetch(
-      'http://localhost:3001/accommodation'
-    ).then((res) => res.json())
+    await this.$axios.$get('/accommodation/').then((response) => {
+      console.log(response)
+      this.accommodations = response
+    })
   },
 }
 </script>

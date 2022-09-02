@@ -36,6 +36,8 @@ export default {
         .then((response) => {
           console.log(response)
           this.errored = false
+          const auth = response
+          this.$store.commit('setAuth', auth)
         })
         .catch((error) => {
           console.log(error)

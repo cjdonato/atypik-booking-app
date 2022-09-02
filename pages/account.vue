@@ -1,14 +1,21 @@
 <template>
   <CustomTemplate>
-    <Login />
-    <Register />
+    {{ this.$store.state.auth }}
+    <div v-if="this.$store.state.auth">
+      You are logged in
+      <button class="btn" @click="logout">Logout</button>
+    </div>
+    <div v-else>
+      <Login />
+      <Register />
+    </div>
   </CustomTemplate>
 </template>
 
 <script>
 import CustomTemplate from '~/components/CustomTemplate.vue'
-import Login from '~/components/Login.vue';
-import Register from '~/components/Register.vue';
+import Login from '~/components/Login.vue'
+import Register from '~/components/Register.vue'
 
 export default {
   name: 'AccountPage',
@@ -16,10 +23,10 @@ export default {
   data: () => ({
     accommodations: [],
   }),
-  async fetch() {
-    this.accommodation = await fetch(
-      'http://localhost:3001/accommodations/'
-    ).then((res) => res.json())
+  methods: {
+    async logout() {
+      this.$store.commit('setAuth', null)
+    },
   },
 }
 </script>
