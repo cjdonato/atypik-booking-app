@@ -47,12 +47,11 @@
   </CustomTemplate>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 import CustomTemplate from '~/components/CustomTemplate.vue'
 
-export default Vue.extend({
-  name: 'IndexPage',
+export default {
+  name: 'DiscoverPage',
   components: { CustomTemplate },
-})
+}
 </script>

@@ -11,7 +11,7 @@
         class="input input-bordered w-full max-w-xs"
       /><input
         v-model="password"
-        type="text"
+        type="password"
         placeholder="Mot de passe"
         class="input input-bordered w-full max-w-xs"
       />

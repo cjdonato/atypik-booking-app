@@ -1,10 +1,7 @@
 <template>
   <CustomTemplate>
-    {{ this.$store.state.auth }}
-    <div v-if="this.$store.state.auth">
-      You are logged in
-      <button class="btn" @click="logout">Logout</button>
-    </div>
+    <!-- <Profile /> -->
+    <Profile v-if="this.$store.state.auth" />
     <div v-else>
       <Login />
       <Register />
@@ -16,17 +13,10 @@
 import CustomTemplate from '~/components/CustomTemplate.vue'
 import Login from '~/components/Login.vue'
 import Register from '~/components/Register.vue'
+import Profile from '~/components/Profile.vue';
 
 export default {
   name: 'AccountPage',
-  components: { CustomTemplate, Login, Register },
-  data: () => ({
-    accommodations: [],
-  }),
-  methods: {
-    async logout() {
-      this.$store.commit('setAuth', null)
-    },
-  },
+  components: { CustomTemplate, Login, Register, Profile },
 }
 </script>
